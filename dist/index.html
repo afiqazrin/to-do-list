@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0753631ca3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../src/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>The Last Of Tasks</h1>
+    </div>
+
+    <div class="sidebar">
+        <ul class="main-ul">
+            <li class="tasks sidebar-li active-project" data-list-id="alltasks">
+                <i class="fa-solid fa-book"></i>
+                All Tasks
+            </li>
+            <li class="today sidebar-li" data-list-id="today">
+                <i class="fas fa-exclamation-circle"></i>
+                Today
+            </li>
+            <li class="next-7-days sidebar-li" data-list-id="next-7-days">
+                <i class="fa-solid fa-calendar"></i>
+                Next 7 Days
+            </li>
+            <li class="important sidebar-li" data-list-id="important">
+                <i class="fas fa-star"></i>
+                Important
+            </li>
+        </ul>
+        <ul class="dynamic-ul">
+
+        </ul>
+        <form data-new-project-form>
+            <input type="submit" value="+" class="submit-new-project">
+            <input type="text" name="new-project" id="new-project" class="new-project" placeholder="new project name"
+                data-new-project-input>
+        </form>
+    </div>
+
+    <div class="main">
+        <div class="main-header">
+            <h1 class="project-title">Youtube</h1>
+        </div>
+        <div class="cards">
+            <div class="card high">
+                <div class="card-left">
+                    <div class="is-completed">
+                        <i class="fa-regular fa-circle"></i>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-title">Watch The Odin Project Videos</div>
+                        <div class="card-details-bottom">
+                            <div class="card-description">Especially on Javascript Modules</div>
+                            <div class="card-deadline">11/11/2003</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-right">
+                    <div class="is-important">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card high">
+                <div class="card-left">
+                    <div class="is-completed">
+                        <i class="fa-regular fa-circle"></i>
+                    </div>
+                    <div class="card-details">
+                        <div class="card-title">Watch The Odin Project Videos</div>
+                        <div class="card-details-bottom">
+                            <div class="card-description">Especially on Javascript Modules</div>
+                            <div class="card-deadline">11/11/2003</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-right">
+                    <div class="is-important">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form action="" id="form-container" class="form-container hidden">
+            <div class="form-elements">
+                <div class="input-box">
+                    <label for="task-name">Task:</label>
+                    <input type="text" name="task-name" id="task-name" placeholder="Enter task name..." required>
+                </div>
+                <div class="input-box">
+                    <label for="task-description">Description:</label>
+                    <input type="text" name="task-description" id="task-description"
+                        placeholder="Enter task description..." required>
+                </div>
+                <div class="input-box">
+                    <label for="task-due">Due Date:</label>
+                    <input type="date" name="task-due" id="task-due" required>
+                </div>
+                <div class="priority-group">
+                    <label for="priority">Priority:</label>
+                    <input type="radio" name="priority" id="high" class="high" value="high" required>
+                    <label for="high">High Priority</label>
+                    <input type="radio" name="priority" id="medium" class="medium" value="high">
+                    <label for="medium">Medium Priority</label>
+                    <input type="radio" name="priority" id="low" class="low" value="high">
+                    <label for="low">Low Priority</label>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="add-task">Add</button>
+                    <button class="close-form">Cancel</button>
+                </div>
+            </div>
+        </form>
+        <div>
+            <button class="add-new-task">Add New Task</button>
+        </div>
+
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

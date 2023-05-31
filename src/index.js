@@ -1,0 +1,11 @@
+import { createProject } from "./createProject";
+import { toggleTaskPopup, checkTile } from "./render";
+import { createTask } from "./createTask";
+const newListForm = document.querySelector("[data-new-project-form]");
+const addTaskButton = document.querySelector(".add-new-task");
+const sidebarContainer = document.querySelector(".sidebar");
+const createTaskButton = document.querySelector(".add-task");
+newListForm.addEventListener("submit", createProject);
+addTaskButton.addEventListener("click", toggleTaskPopup);
+sidebarContainer.addEventListener("click", checkTile);
+createTaskButton.addEventListener("click", createTask);
